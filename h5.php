@@ -53,8 +53,6 @@
         
             ?>
     
-    <div class="container">
-        <div class="result-box">
             <h4>Tüdrukud II</h4>
 
         <?php
@@ -81,8 +79,8 @@
             echo "<p>" . $tydrukud[$suvalineindeks] . "</p>";
             ?>
 
-            <div class="container">
-            <div class="result-box">
+            
+            
             <h4>Automargid</h4>
 
             <?php
@@ -127,12 +125,12 @@
 
             ?>
 
-    <div class="container">
-        <div class="result-box">
+    
+        
             <h4>Palgad</h4>
 
             <?php
-            
+            //palk
             $palgad_2018 = array(1220,1213,1295,1312,1298,1354,1296,1286,1292,1327,1369,1455);
 
             
@@ -147,8 +145,8 @@
             echo "2018 aasta palkade keskmine: " . number_format($keskmine_palk, 2) ."<br>";
             ?>
 
-    <div class="container">
-        <div class="result-box">
+    
+        
             <h4>Firmad</h4>
 
 
@@ -159,7 +157,7 @@
 
             sort($firma_nimed);
 
-            echo "Firmade nimed:<br>";
+            echo "<h5>Firmade nimed: </h5>";
             foreach ($firma_nimed as $firma) {
                 echo $firma ."<br>";
             }
@@ -174,15 +172,17 @@
             }
 
             
-            echo "<br>Korrastatud firma nimed:<br>";
+            echo "<h5>Korrastatud firma nimed: </h5>";
             foreach ($firma_nimed as $firma) {
                 echo $firma ."<br>";
             }
 
-            
-            $riigid = array("Eesti", "Soome", "Rootsi", "Norra", "Saksamaa", "Taani");
+            //riigid
+            $riigid = array("Canada", "Brazil", "France", "Russia", "Kazakhstan", "Portugal");
 
-            
+            sort($riigid);
+
+
             $pikim_riik = '';
             foreach ($riigid as $riik) {
                 if (strlen($riik) > strlen($pikim_riik)) {
@@ -193,9 +193,11 @@
             echo "<br>Kõige pikema riigi nime märkide arv: ". strlen($pikim_riik);
             ?>
 
-
-
             <?php
+
+
+
+
 
             ?>
         </div>
