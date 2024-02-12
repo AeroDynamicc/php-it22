@@ -275,21 +275,16 @@
         <?php
 
         // Pildid massiiv
-        $images = array('prentice' => 'prentice.jpg'
-                        'peterus' => 'peterus.jpg'
-                        'pete' => 'pete.jpg'
-                        'gabriel' => 'gabriel.jpg'
-                        'freeland' => 'freeland.jpg'
-                        'devlin' => 'devlin.jpg');
-
-
-            echo $images;
         
+        $pildid = ["prentice.jpg", "freeland.jpg", "peterus.jpg", "devlin.jpg", "gabriel.jpg", "pete.jpg"];
+            foreach ($pildid as $pilt) {
+                echo '
+                <div class="col-md-2">
+                    <img src="\img\prentice' . $pilt . '" alt="' . basename($pilt, ".jpg") . '" class="img-fluid rounded-circle mb-3">
+                </div>';
+            }
 
         
-        
-    
-
         
         ?>
     </div>

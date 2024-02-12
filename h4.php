@@ -127,10 +127,12 @@
                     if (!empty($length) && !empty($width)) {
                         if ($length == $width) {
                             echo 'true-result">';
-                            echo "<p>Võimalik, see on ruut</p>";
+                            echo "<p>See on ruut</p>";
+                            echo '<img src="ruut.png" alt="Ruut">';
                         } else {
                             echo 'true-result">';
-                            echo "<p>Võimalik, see on ristkülik</p>";
+                            echo "<p>See on ristkülik</p>";
+                            echo '<img src="ristkülik.png" alt="Ristkülik">';
                         }
                     } else {
                         echo 'false-result">';
@@ -221,36 +223,38 @@
             <div class="col-md-6 mt-5">
                 <h4>Ristkülik või ruut II</h4>
                 <form method="post" action="">
-                    <div class="form-group">
-                        <label for="side1">Pikkus:</label>
-                        <input type="number" class="form-control" id="side1" name="side1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="side2">Laius:</label>
-                        <input type="number" class="form-control" id="side2" name="side2" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Kontrolli</button>
-                </form>
-                <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["side1"]) && isset($_POST["side2"])) {
-                    $side1 = $_POST["side1"];
-                    $side2 = $_POST["side2"];
-                
-                    echo '<div class="result-box ';
-                    if (!empty($side1) && !empty($side2)) {
-                        if ($side1 == $side2) {
-                            echo 'true-result">';
-                            echo "<p>Võimalik, see on ruut</p>";
-                        } else {
-                            echo 'true-result">';
-                            echo "<p>Võimalik, see on ristkülik</p>";
-                        }
+                <div class="form-group">
+                    <label for="side1">Pikkus:</label>
+                    <input type="number" class="form-control" id="side1" name="side1" required>
+                </div>
+                <div class="form-group">
+                    <label for="side2">Laius:</label>
+                    <input type="number" class="form-control" id="side2" name="side2" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Kontrolli</button>
+            </form>
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["side1"]) && isset($_POST["side2"])) {
+                $side1 = $_POST["side1"];
+                $side2 = $_POST["side2"];
+
+                echo '<div class="result-box ';
+                if (!empty($side1) && !empty($side2)) {
+                    if ($side1 == $side2) {
+                        echo 'true-result">';
+                        echo "<p>See on ruut</p>";
+                        echo '<img src="ruut.png" alt="Ruut">';
                     } else {
-                        echo 'false-result">';
-                        echo "<p>Pikkus või laius on puudu</p>";
+                        echo 'true-result">';
+                        echo "<p>See on ristkülik</p>";
+                        echo '<img src="ristkülik.png" alt="Ristkülik">';
                     }
-                    echo '</div>';
+                } else {
+                    echo 'false-result">';
+                    echo "<p>Pikkus või laius on puudu</p>";
                 }
+                echo '</div>';
+            }
                 ?>
             </div>
         </div>
