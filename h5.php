@@ -280,7 +280,7 @@
             foreach ($pildid as $pilt) {
                 echo '
                 <div class="col-md-2">
-                    <img src="\img\prentice' . $pilt . '" alt="' . basename($pilt, ".jpg") . '" class="img-fluid rounded-circle mb-3">
+                    <img src="\img' . $pilt . '" alt="' . basename($pilt, ".jpg") . '" class="img-fluid rounded-circle mb-3">
                 </div>';
             }
 

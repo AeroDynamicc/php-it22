@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harjutused</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .result-box {
-            border-radius: 10px;
-            padding: 10px;
-            margin-top: 10px;
-        }
-        .true-result {
-            border: 2px solid green;
-        }
-        .false-result {
-            border: 2px solid red;
-        }
-    </style>
 </head>
 <body>
         
