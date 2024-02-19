@@ -148,6 +148,7 @@
                 $valitud_oeldis = $oeldis[array_rand($oeldis)];
                 $valitud_sihitis = $sihitis[array_rand($sihitis)];
 
+
                 
                 $lause = "$valitud_alus $valitud_oeldis $valitud_sihitis.";
 

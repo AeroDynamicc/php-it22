@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dünaamiline leht</title>
+    <title>Harjutused</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Dünaamiline leht</h1>
-    <p>Sisesta lehe nimi:</p>
-    <form action="content.php" method="get">
-        <input type="text" name="page" placeholder="Sisesta lehe nimi">
-        <button type="submit">Avalehele</button>
-    </form>
+ <style>
+	{
+	padding: 0;
+	margin: 0;
+	font-family: Verdana, sans-serif;
+}
+#pais {
+	background-color: #6C9;
+	line-height: 100px;
+}
+#jalus {
+	background-color: #F93;
+	line-height: 30px;
+}
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+ </style>
+
+</head>
+<body>
+<header id="pais">
+
+	<div class="text-center">
+  <h1>Veebisaiti</h1>
+</header>
+<div class="text-center">
+<div id="sisu">
+  <h2>Lorem ipsum</h2>
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacinia feugiat mi, ac blandit purus hendrerit vel.</p>
+</div>
+
+  <footer id="jalus">
+    <p>No raitkopi
+	</p>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-<?php
-// Funktsioon turvalisuse kontrolliks
-function securePage($page) {
-    // Kõik lubatud lehtede nimed
-    $allowedPages = array("page1", "page2", "page3", "page4");
-
-    // Kontrollime, kas leht on lubatud
-    if (in_array($page, $allowedPages)) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-// Kui URL-i sisu on olemas
-if (isset($_GET['page'])) {
-    // Hangime lehe nime
-    $page = $_GET['page'];
-
-    // Kontrollime turvalisust
-    if (securePage($page)) {
-        // Kuva leht vastavalt nimele
-        echo "<h1>Leht: $page</h1>";
-        echo "<p>Sisu lehele $page</p>";
-    } else {
-        // Leht ei eksisteeri, kuvame veateate
-        echo "<h1>Lehte ei leitud!</h1>";
-        echo "<p>Lehte nimega \"$page\" ei eksisteeri.</p>";
-    }
-}
-?>
-
