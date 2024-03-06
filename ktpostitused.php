@@ -37,16 +37,14 @@
             padding: 20px 0;
         }
         .post hr {
-            width: 30%; /* Muutke vastavalt vajadusele */
+            width: 30%; /* Muudetav vastavalt vajaduesele */
             margin: 0 auto; /* Tsentrigeerib joone */
             border-top: 1px solid #1c1c1c; /* Väike joon postituste vahel */
         }
     </style>
 </head>
-
 <body>
     
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="#">Daniil Meijel</a>
@@ -56,16 +54,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="Menüü">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="ktavaleht.php">Avaleht</a>
+                    <a class="nav-link" href="#">Avaleht</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ktminust.php">Minust</a>
+                    <a class="nav-link" href="#">Minust</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ktkontakt.php">Kontakt</a>
+                    <a class="nav-link" href="#">Kontakt</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="lisa_postitus.php">Admin</a>
+                    <a class="nav-link" href="#">Admin</a>
                 </li>
             </ul>
         </div>
@@ -81,33 +79,33 @@
     </div>
 </div>
 
-
-    <div class="container justify-content-center">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <?php
-                // Avage tekstifail
-                $failinimi = "postitused2.txt";
-                $sisu = file($failinimi);
-                
-                // Kuvage postituste sisu
-                foreach ($sisu as $rida) {
-                    echo "<div class='post'>$rida</div>";
-                    echo "<hr>";
-                }
-                ?>
-                
-                
-                <div class="text-end">
+<div class="container justify-content-center">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <?php
+            // Avage tekstifail
+            $failinimi = "postitused2.txt";
+            $sisu = file($failinimi);
+            
+            // Kuvage postituste sisu
+            foreach ($sisu as $rida) {
+                echo "<div class='post'>$rida</div>";
+                echo "<hr>";
+            }
+            ?>
+            
+            <div class="text-end">
                 <a href="ktavaleht.php" class="btn btn-primary"><- UUEMAD POSTITUSED</a>
-                </div>
             </div>
         </div>
     </div>
-    <hr style="border-top: 1px solid black; width: 100%; margin-left: 0; margin-right: auto;">
-    <div class="text-center">
+</div>
+
+<hr style="border-top: 1px solid black; width: 100%; margin-left: 0; margin-right: auto;">
+<div class="text-center">
     <i class="bi bi-facebook"></i>
-        <p>Daniil Meijel</p>
+    <p>Daniil Meijel</p>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

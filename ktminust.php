@@ -81,16 +81,11 @@
 </div>
 
 <div class="container">
-        <h1>Minust</h1>
-        <p>Olen Daniil Meijel.<br>Olen 18 aastane.<br> Õpin Haapsalu Kutsehariduskeskuses (HKHKs) Infotehnoloogiat.</p>
+    <h1>Minust</h1>
+    <p>Olen Daniil Meijel.<br>Olen 18 aastane.<br> Õpin Haapsalu Kutsehariduskeskuses (HKHKs) Infotehnoloogiat.</p>
+</div>
 
-
-
-
-            </div>
-        </div>
-    </div>
-    <footer class="fixed-bottom">
+<footer class="fixed-bottom">
     <hr style="border-top: 1px solid black; width: 100%; margin-left: 0; margin-right: auto;">
     <div class="container text-center">
         <i class="bi bi-facebook"></i>
