@@ -37,16 +37,15 @@
             padding: 20px 0;
         }
         .post hr {
-            width: 30%; /* Muutke vastavalt vajadusele */
+            width: 30%; /* Muudetav vastavalt vajaduesele */
             margin: 0 auto; /* Tsentrigeerib joone */
-            border-top: 1px solid #1c1c1c; /* Väike joon postituste vahel */
+            border-top: 1px solid #1c1c1c; /*Väike joon postituste vahel */
         }
     </style>
 </head>
 
 <body>
     
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="#">Daniil Meijel</a>
@@ -81,26 +80,45 @@
     </div>
 </div>
 
-
-<div class="container justify-content-center">
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class='post'><h4>Uurimistöö kõrgeim vorm</h4><br><p>Inimene peab uurima, sest see on avastamise kõrgeim vorm. Probleemid näivad 150miili kõrguselt pisikesed</p></div><hr><div class='post'><h4>Arvutite ja Televiisorite Remont</h4><br><p>Windows install, arvutite parandamine, arvutite ehitamine</p></div><hr><div class='post'><h4>Arvutite hooldus</h4><br><p>Termopasta vahetus, tolmupuhastus</p></div><hr><div class='post'><h4>Huvitav fakt!</h4><br><p>Huvitav fakt: tuled kahe arvutiga, saad ühe arvuti diagnostikat tasuta</p></div><hr>                
-                
-            <div class="text-end">
-            <a href="ktpostitused.php" class="btn btn-primary">VANEMAD POSTITUSED -></a>
+<div class="container">
+    <h1>Kontakt</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nimi:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Sisestage oma nimi">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Sisestage oma emaili aadress">
+                </div>
+                <div class="form-group">
+                    <label for="message">Sõnum:</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Sisestage oma sõnum siia"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Saada</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div class="contact-info">
+                <p><strong>Kontaktandmed:</strong></p>
+                <p>Email: meijeldaniil@gmail.com</p>
+                <p>Telefon: +5372 2735</p>
+                <p>Asukoht: Tallinna mnt 10</p>
             </div>
         </div>
     </div>
 </div>
-<hr style="border-top: 1px solid black; width: 100%; margin-left: 0; margin-right: auto;">
-<div class="text-center">
-    <i class="bi bi-facebook"></i>
-    <p>Daniil Meijel</p>
-</div>
 
-<footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<footer class="fixed-bottom">
+    <hr style="border-top: 1px solid black; width: 100%; margin-left: 0; margin-right: auto;">
+    <div class="container text-center">
+        <i class="bi bi-facebook"></i>
+        <p>Daniil Meijel</p>
+    </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

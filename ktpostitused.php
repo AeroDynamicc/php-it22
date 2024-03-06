@@ -82,25 +82,33 @@
 </div>
 
 
-<div class="container justify-content-center">
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class='post'><h4>Uurimistöö kõrgeim vorm</h4><br><p>Inimene peab uurima, sest see on avastamise kõrgeim vorm. Probleemid näivad 150miili kõrguselt pisikesed</p></div><hr><div class='post'><h4>Arvutite ja Televiisorite Remont</h4><br><p>Windows install, arvutite parandamine, arvutite ehitamine</p></div><hr><div class='post'><h4>Arvutite hooldus</h4><br><p>Termopasta vahetus, tolmupuhastus</p></div><hr><div class='post'><h4>Huvitav fakt!</h4><br><p>Huvitav fakt: tuled kahe arvutiga, saad ühe arvuti diagnostikat tasuta</p></div><hr>                
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <?php
+                // Avage tekstifail
+                $failinimi = "postitused2.txt";
+                $sisu = file($failinimi);
                 
-            <div class="text-end">
-            <a href="ktpostitused.php" class="btn btn-primary">VANEMAD POSTITUSED -></a>
+                // Kuvage postituste sisu
+                foreach ($sisu as $rida) {
+                    echo "<div class='post'>$rida</div>";
+                    echo "<hr>";
+                }
+                ?>
+                
+                
+                <div class="text-end">
+                <a href="ktavaleht.php" class="btn btn-primary"><- UUEMAD POSTITUSED</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<hr style="border-top: 1px solid black; width: 100%; margin-left: 0; margin-right: auto;">
-<div class="text-center">
+    <hr style="border-top: 1px solid black; width: 100%; margin-left: 0; margin-right: auto;">
+    <div class="text-center">
     <i class="bi bi-facebook"></i>
-    <p>Daniil Meijel</p>
-</div>
+        <p>Daniil Meijel</p>
 
-<footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

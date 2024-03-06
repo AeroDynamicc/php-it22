@@ -1,0 +1,4 @@
+<h4>Uurimistöö kõrgeim vorm</h4><br><p>Inimene peab uurima, sest see on avastamise kõrgeim vorm. Probleemid näivad 150miili kõrguselt pisikesed</p>
+<h4>Arvutite ja Televiisorite Remont</h4><br><p>Windows install, arvutite parandamine, arvutite ehitamine</p>
+<h4>Arvutite hooldus</h4><br><p>Termopasta vahetus, tolmupuhastus</p>
+<h4>Huvitav fakt!</h4><br><p>Huvitav fakt: tuled kahe arvutiga, saad ühe arvuti diagnostikat tasuta</p>
