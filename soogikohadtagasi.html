@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valige asutus mida hinnata</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .search-box {
+            margin-top: 20px;
+        }
+        .pagination {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Valige asutus mida hinnata</h2>
+       
+        <div class="search-box">
+            <input class="form-control" id="searchInput" type="text" placeholder="Otsi...">
+            <button class="btn btn-primary mt-2" onclick="searchRestaurant()">Otsi</button>
+        </div>
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Nimi</th>
+                    <th>Asukoht</th>
+                    <th>Keskmine hinne</th>
+                    <th>Hinnatud (korda)</th>
+                </tr>
+            </thead>
+            <tbody id="restaurantList">
+                <tr>
+                    <td>Söögikoht 1</td>
+                    <td>Asukoht 1</td>
+                    <td>7.6</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Söögikoht 2</td>
+                    <td>Asukoht 2</td>
+                    <td>8.3</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Söögikoht 1</td>
+                    <td>Asukoht 1</td>
+                    <td>7.6</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Söögikoht 2</td>
+                    <td>Asukoht 2</td>
+                    <td>8.3</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Söögikoht 1</td>
+                    <td>Asukoht 1</td>
+                    <td>7.6</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Söögikoht 2</td>
+                    <td>Asukoht 2</td>
+                    <td>8.3</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Söögikoht 1</td>
+                    <td>Asukoht 1</td>
+                    <td>7.6</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Söögikoht 2</td>
+                    <td>Asukoht 2</td>
+                    <td>8.3</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Söögikoht 1</td>
+                    <td>Asukoht 1</td>
+                    <td>7.6</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Söögikoht 2</td>
+                    <td>Asukoht 2</td>
+                    <td>8.3</td>
+                    <td>5</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <nav aria-label="Pagination" class="pagination">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="soogikohadtagasi.html">Eelmised</a></li>
+                <li class="page-item"><a class="page-link" href="soogikohadette.html">Järgmised</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+    
+    <script>
+        function searchRestaurant() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("restaurantList");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Esimene lahtr, kus on söögikoha nimi
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }       
+            }
+        }
+    </script>
+</body>
+</html>
